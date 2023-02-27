@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>Coffee Shop - Products</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Rubik:300,400,600,700&amp;lang=en" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Poppins:300,400,600,700&amp;lang=en" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="font-poppins">
+    <!-- Header Section -->
+    <header class="onlogin">
+        <div class="title">
+            <img src="./img/icon.png" alt="icon-coffee" width="30px">
+            <h1>Coffee Shop</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./">Home</a></li>
+                <li><a href="./product.html">Product</a></li>
+                <li><a href="#">Your Cart</a></li>
+                <li><a href="#">History</a></li>
+            </ul>
+        </nav>
+        <form action="" class="search-section">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 16L12.375 12.375M14.3333 7.66667C14.3333 11.3486 11.3486 14.3333 7.66667 14.3333C3.98477 14.3333 1 11.3486 1 7.66667C1 3.98477 3.98477 1 7.66667 1C11.3486 1 14.3333 3.98477 14.3333 7.66667Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <input type="text" class="search" placeholder="Search">
+        </form>
+        <a href="" class="chat-link">
+            <img src="./img/chat.png" alt="" width="30px">
+        </a>
+        <a href="./profile.html">
+        <div class="user-photo"><img src="./img/photo-profile.jpg" alt="" width="30px"></div>
+        </a>
+        <div class="hamburger-btn">
+            <svg viewBox="0 0 100 80" width="30" height="30">
+            <rect width="100" height="20"></rect>
+            <rect y="30" width="100" height="20"></rect>
+            <rect y="60" width="100" height="20"></rect>
+          </svg>
+        </div>
+    </header>
+    <hr>
+
+    <section class="product-detail">
+            <div>
+                <div class="navigation">Favorite & Promo <span class="active">> Cold Brew</span></div>
+                <div style="position: relative;">
+                    <img src="./img/cold-brew.jpeg" alt="" class="product-detail-img">
+                    <div class="chat-button"><img src="./img/chat.png" alt=""></div>
+                </div>
+                <p class="send-tos">Delivery only on <b>Monday to<br>friday</b> at  <b>1 - 7 pm</b></p>
+            </div>
+            <div>
+                <div class="process-container">
+                    <ul class="process">
+                        <li>Order</li>
+                        <li>Checkout</li>
+                        <li class="active">Payment</li>
+                    </ul>
+                </div>
+                <h2 class="product-name active">COLD BREW</h2>
+                <h2 class="product-name">IDR 30.000</h2>
+                <p class="product-description">Cold brewing is a method of brewing that combines ground coffee and cool water and uses time instead of heat to extract the flavor. It is brewed in small batches and steeped for as long as 48 hours.</p>
+                <select class="mb20">
+                    <option selected value="0">Select Size</option>
+                    <option value="1">R</option>
+                    <option value="2">L</option>
+                    <option value="3">XL</option>
+                </select>
+                <select class="mb20">
+                    <option selected value="0">Select Delivery Method</option>
+                    <option value="1">Dine in</option>
+                    <option value="2">Door Delivery</option>
+                    <option value="3">Pick up</option>
+                </select>
+                <div class="count-n-btn">
+                    <div class="product-count">
+                        <p onclick="document.getElementById('countCart').value = Number(document.getElementById('countCart').value)+  1;">+</p>
+                        <input type="number" name="" id="countCart" min="0" value="2" disabled>
+                        <p onclick="document.getElementById('countCart').value = (Number(document.getElementById('countCart').value) < 1 ? 0:Number(document.getElementById('countCart').value)-1)">-</p>
+                    </div>
+                    <div style="flex:3;">
+                        <button class="big-btn btn-yellow">Add To Cart</button>
+                    </div>
+                </div>
+                <button class="big-btn btn-brown">Checkout</button>
+            </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-v1">
+        <div class="company-profile">
+            <div>
+                <div class="title">
+                    <img src="./img/icon.png" alt="icon-coffee" width="30px">
+                    <h2>Coffee Shop</h2>
+                </div>
+                <p>Coffee Shop is a store that sells some good meals, and especially coffee. We provide high quality beans</p>
+                <div class="social-media">
+                    <a href="" class="icon-social-media"><img src="./img/facebook.svg" width="20px" alt="twitter"></a>
+                    <a href="" class="icon-social-media"><img src="./img/twitter.svg" width="20px" alt="twitter"></a>
+                    <a href="" class="icon-social-media"><img src="./img/instagram.svg" width="20px" alt="twitter"></a>
+                </div>
+                <p class="grey">©2023CoffeeStore    </p>
+            </div>
+        </div>
+        <div class="links">
+            <div class="section-links">Product</div>
+            <ul>
+                <li><a href="">Download</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">Locations</a></li>
+                <li><a href="">Countries</a></li>
+                <li><a href="">Blog</a></li>
+            </ul>
+        </div>
+        <div class="links">
+            <div class="section-links">Engage</div>
+            <ul>
+                <li><a href="">Coffee Shop?</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms of Services</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

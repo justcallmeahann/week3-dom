@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="unlogged">
+        <div class="title">
+            <img src="./img/icon.png" alt="icon-coffee" width="30px">
+            <h1>Coffee Shop</h1>
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/product.html">Product</a></li>
+                <li><a href="/cart.html">Your Cart</a></li>
+                <li><a href="/history.html">History</a></li>
+            </ul>
+        </nav>
+        <div class="buttons">
+            <button class="bg-color-1" onclick="location.href = './login.html'">Login</button>
+            <button onclick="location.href = './signup.html'">Sign Up</button>
+        </div>
+    </header>
+    <section class="coffee-landing-page">
+        <div>            
+            <h2>Start Your Day with Coofee and Good Meals</h2>
+            <p>We provide high quality beans, good taste, and healthy meals made by love just for you. Start your day with us for a bigger smile!</p>
+            <div><button class="big-btn" style="width: 50%;">Get Started</button></div>
+        </div>
+        <div>
+            
+        </div>
+    </section>
+    <section class="float-box">
+        <div class="box-shadow">
+            <div class="data-section-container">
+                <div class="data-section">
+                    <div class="icon"><img src="./img/user.svg" alt=""></div>
+                    <div class="data-section-desc">
+                        <h4>90+</h4>
+                        <p>Staff</p>
+                    </div>
+                </div>
+                <div class="data-section">
+                    <div class="icon"><img src="./img/place.svg" alt=""></div>
+                    <div class="data-section-desc">
+                        <h4>30+</h4>
+                        <p>Stores</p>
+                    </div>
+                </div>
+                <div class="data-section">
+                    <div class="icon"><img src="./img/love.svg" alt=""></div>
+                    <div class="data-section-desc">
+                        <h4>8'000+</h4>
+                        <p>Customers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="provide">
+        <div class="img"><img src="./img/team-work.jpeg" alt="" width="100%"></div>
+        <div class="provide-desc">
+            <h2>We Provide Good Coffee and Healthy Meals</h2>
+            <p>You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+            <ul>
+                <li><img src="./img/check-circle.svg" alt=""> High quality beans</li>
+                <li><img src="./img/check-circle.svg" alt=""> Healthy meals, you can request the ingredients</li>
+                <li><img src="./img/check-circle.svg" alt=""> Chat with our staff to get better experience for ordering</li>
+                <li><img src="./img/check-circle.svg" alt=""> Free member card with a minimum purchase of IDR 200.000.</li>
+            </ul>
+        </div>
+    </section>
+    <div class="gradient-homepage">
+        <section class="favorite">
+            <div class="section-title">
+                <h2>Here is People’s Favorite</h2>
+                <p>Let’s choose and have a bit taste of poeple’s favorite. It might be yours too!</p>
+            </div>
+            <div class="favorite-card-container">
+                <div class="favorite-card">
+                    <img src="./img/products/4.png" alt="" width="140px" class="rounded">
+                    <h3>Hazelnut Latte</h3>
+                    <ul>
+                        <li>HazelnutSyrup</li>
+                        <li>Wanilla Whipped Cream</li>
+                        <li>Ice / Hot</li>
+                        <li>Sliced Banana on Top</li>
+                    </ul>
+                    <p class="price">IDR 25.000</p>
+                    <button>Order Now</button>
+                </div>
+                <div class="favorite-card">
+                    <img src="./img/products/7.png" alt="" width="140px" class="rounded">
+                    <h3>Pinky Promise</h3>
+                    <ul>
+                        <li>1 Shot of Coffee</li>
+                        <li>Vanilla Whipped Cream</li>
+                        <li>Chocolate Biscuits</li>
+                        <li>Strawberry Syrup</li>
+                        <li>Sliced strawberry on Top</li>
+                    </ul>
+                    <p class="price">IDR 30.000</p>
+                    <button>Select</button>
+                </div>
+                <div class="favorite-card">
+                    <img src="./img/products/8.png" alt="" width="140px" class="rounded">
+                    <h3>Chicken Wings</h3>
+                    <ul>
+                        <li>Wings</li>
+                        <li>Drum Sticks</li>
+                        <li>Mayonaise and Lemon</li>
+                        <li>Hot Fried</li>
+                        <li>Secret Recipe</li>
+                        <li>Buy 1 Get 1 only for Dine in</li>
+                    </ul>
+                    <p class="price">IDR 40.000</p>
+                    <button>Select</button>
+                </div>
+            </div>
+        </section>
+        <section class="map">
+            <div class="section-title">
+                <h2>Visit Our Store in<br>the Spot on the Map Below</h2>
+                <p>See our store in every city on the spot and spen your good day there. See you soon!</p>
+            </div>
+            <div class="img">
+                <img src="./img/global.svg" alt="">
+            </div>
+        </section>
+        <section class="partner">
+            <div class="section-title">
+                <h2>Our Partner</h2>
+            </div>
+            <div class="partners">
+                <img src="./img/netflix.png" alt="" width="190px">
+                <img src="./img/reddit.png" alt="" width="190px">
+                <img src="./img/amazon.png" alt="" width="190px">
+                <img src="./img/discord.png" alt="" width="190px">
+                <img src="./img/spotify.png" alt="" width="190px">
+            </div>
+        </section>
+        <section class="customer-quotes">
+            <div class="section-title">
+                <h2>Loved by Thousands of<br>Happy Customer</h2>
+                <p>These are the stories of our customers who have visited us with great pleasure.</p>
+            </div>
+            <div class="q-container" style="padding-left: 100px;">
+                <div class="q-box">
+                    <div class="profile">
+                        <img src="./img/profile-1.png" alt="" class="q-profile">
+                        <div class="name">
+                            <p class="bold">Viezh Robert</p>
+                            <p>Warsaw, Poland</p>
+                        </div>
+                        <div class="rating"> 4.5  <img src="./img/star.svg" alt=""></div>
+                    </div>
+                    <p>“Wow... I am very happy to spend my whole day here. the Wi-fi is good, and the coffee and meals tho. I like it here!! Very recommended!</p>
+                </div>
+                <div class="q-box">
+                    <div class="profile">
+                        <img src="./img/profile-2.png" alt="" class="q-profile">
+                        <div class="name">
+                            <p class="bold">Yessica Christy</p>
+                            <p>Shanxi, China</p>
+                        </div>
+                        <div class="rating">4.5 <img src="./img/star.svg" alt=""></div>
+                    </div>
+                    <p>“I like it because I like to travel far and still can make my day better just by drinking their Hazelnut Latte</p>
+                </div>
+                <div class="q-box">
+                    <div class="profile">
+                        <img src="./img/profile-3.png" alt="" class="q-profile">
+                        <div class="name">
+                            <p class="bold">Kim Young Jou</p>
+                            <p>Seoul, South Korea</p>
+                        </div>
+                        <div class="rating">4.5 <img src="./img/star.svg" alt=""></div>
+                    </div>
+                    <p>“This is very unusual for my taste, I haven’t liked coffee before but their coffee is the best! and yup, you have to order the chicken wings, the best in town!</p>
+                </div>
+            </div>
+            <div class="slider">
+                <div class="left"><button class="active"></button><button></button><button></button><button></button></div>
+                <div class="right"><button><img src="./img/arrow-left.svg" alt=""></button><button><img src="./img/arrow-right.svg" alt=""></button></div>
+            </div>
+        </section>
+    </div>
+    <section class="float-box bottom">
+    <div class="box-shadow promo">
+        <div class="box-section">
+            <h2>Check our promo today!</h2>
+            <p>Let's see the deals and pick yours!</p>
+        </div>
+        <div class="box-section hide">
+        </div>
+        <div class="box-section">
+            <button class="big-btn" style="width:75%">See Promo</button>
+        </div>
+    </div>
+    </section>
+    <div class="boundary" style="height: 90px;">
+    </div>
+    
+    <!-- Footer Section -->
+    <footer class="footer-v1">
+        <div class="company-profile">
+            <div>
+                <div class="title">
+                    <img src="./img/icon.png" alt="icon-coffee" width="30px">
+                    <h2>Coffee Shop</h2>
+                </div>
+                <p>Coffee Shop is a store that sells some good meals, and especially coffee. We provide high quality beans</p>
+                <div class="social-media">
+                    <a href="" class="icon-social-media"><img src="./img/facebook.svg" width="20px" alt="twitter"></a>
+                    <a href="" class="icon-social-media"><img src="./img/twitter.svg" width="20px" alt="twitter"></a>
+                    <a href="" class="icon-social-media"><img src="./img/instagram.svg" width="20px" alt="twitter"></a>
+                </div>
+                <p class="grey">©2023CoffeeStore    </p>
+            </div>
+        </div>
+        <div class="links">
+            <div class="section-links">Product</div>
+            <ul>
+                <li><a href="">Download</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">Locations</a></li>
+                <li><a href="">Countries</a></li>
+                <li><a href="">Blog</a></li>
+            </ul>
+        </div>
+        <div class="links b">
+            <div class="section-links">Engage</div>
+            <ul>
+                <li><a href="">Coffee Shop?</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms of Services</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
