@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History ordered products</title>
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <script src="./js/navigation.js" defer></script>
+    <script src="./js/history.js" defer></script>
+</head>
+<body>
+    <header class="py-10 px-22 flex justify-between">
+        <div class="font-extrabold flex flex-row justify-center gap-2">
+            <img src="./img/icon.png" alt="icon-coffee" width="30px" class="align-middle"> <h1 class="text-xl">Coffee Shop</h1>
+        </div>
+        <div class="navbar-burger select-none cursor-pointer lg:hidden">
+                <img src="./img/burger-menu-left.svg" width="30px" height="30px" alt="">
+        </div>
+        <nav class="hidden lg:flex flex-row gap-8">
+            <li class="list-none"><a href="/">Home</a></li>
+            <li class="list-none"><a href="/product.html">Product</a></li>
+            <li class="list-none"><a href="#">Your Cart</a></li>
+            <li class="list-none"><a href="/history.html" class="font-bold text-[#6A4029]">History</a></li>
+        </nav>
+        <div class="flex-row gap-10 hidden lg:flex">
+            <form action="" class="search-section">
+                <svg width="28" height="28" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 16L12.375 12.375M14.3333 7.66667C14.3333 11.3486 11.3486 14.3333 7.66667 14.3333C3.98477 14.3333 1 11.3486 1 7.66667C1 3.98477 3.98477 1 7.66667 1C11.3486 1 14.3333 3.98477 14.3333 7.66667Z" stroke="#4F5665" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </form>
+            <a href="" class="chat-link">
+                <img src="./img/chat.webp" alt="" width="30px">
+            </a>
+            <a href="./profile.html"><img src="./img/photo-profile.jpg" alt="" width="30px" class="rounded-full"></a>
+        </div>
+        
+    </header>
+    <div class="navbar-menu relative z-50 hidden">
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 transition-opacity opacity-25 "></div>
+        <nav class="navbar-body fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto transition ease-in translate-x-[-100%]">
+            <div class="flex items-center mb-8">
+                <a class="mr-auto text-3xl font-bold leading-none" href="#">
+                    <img src="./img/icon.png" alt="icon-coffee" width="50px" class="align-middle">
+                </a>
+                <button class="navbar-close">
+                    <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div>
+                <ul>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Home</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Products</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Your Cart</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">History</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-auto">
+                <div class="pt-6">
+                    <a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold bg-gray-50 hover:bg-gray-100 rounded-xl shadow-md" href="#">Login</a>
+                    <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center font-semibold bg-secondary hover:bg-blue-700  rounded-xl shadow-md" href="./signup.html">Sign Up</a>
+                </div>
+                <p class="my-4 text-xs text-center text-gray-400">
+                    <span>Copyright © 2023</span>
+                </p>
+            </div>
+        </nav>
+    </div>
+    <section class="bg-history bg-cover bg-center px-22 py-24 text-white">
+        <div class="flex flex-col items-center p-3">
+            <h2 class="text-3xl drop-shadow-[0px_10px_10px_rgba(0,0,0,0.6)] font-extrabold mb-5 text-center">Let&#8242;s see what you have bought!</h2>
+            <p>Select items to delete</p>
+        </div>
+        <nav class="flex flex-row justify-end gap-4">
+            <li class="list-none cursor-pointer select-none" id="selectAll"><p class="underline font-bold">Select All</p></li>
+            <li class="list-none cursor-pointer select-none" id="deleteSelected"><p class="underline font-bold">Delete</p></li>
+        </nav>
+        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-black py-7">
+            <div class="history-card  flex flex-row px-4 py-5 bg-white rounded-2xl gap-5 relative">
+                <div class="">
+                    <img src="./img/products/1.webp" alt="" width="100px" class="rounded-full">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="font-extrabold text-xl">Veggie tomato mix 1</h3>
+                    <p class="text-tertiary">IDR 34.000</p>
+                    <p class="text-tertiary">Delivered</p>
+                </div>
+                <input type="checkbox" class="checkbox-history absolute bottom-4 right-4 delete-checkbox border-secondary bg-secondary rounded h-5 w-5">
+            </div>
+            
+            <div class="history-card  flex flex-row px-4 py-5 bg-white rounded-2xl gap-5 relative">
+                <div class="">
+                    <img src="./img/products/1.webp" alt="" width="100px" class="rounded-full">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="font-extrabold text-xl">Veggie tomato mix 2</h3>
+                    <p class="text-tertiary">IDR 34.000</p>
+                    <p class="text-tertiary">Delivered</p>
+                </div>
+                <input type="checkbox" class="checkbox-history absolute bottom-4 right-4 delete-checkbox border-secondary bg-secondary rounded h-5 w-5">
+            </div>
+            <div class="history-card  flex flex-row px-4 py-5 bg-white rounded-2xl gap-5 relative">
+                <div class="">
+                    <img src="./img/products/1.webp" alt="" width="100px" class="rounded-full">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="font-extrabold text-xl">Veggie tomato mix</h3>
+                    <p class="text-tertiary">IDR 34.000</p>
+                    <p class="text-tertiary">Delivered</p>
+                </div>
+                <input type="checkbox" class="checkbox-history absolute bottom-4 right-4 delete-checkbox border-secondary bg-secondary rounded h-5 w-5">
+            </div>
+            <div class="history-card flex flex-row px-4 py-5 bg-white rounded-2xl gap-5 relative">
+                <div class="">
+                    <img src="./img/products/1.webp" alt="" width="100px" class="rounded-full">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="font-extrabold text-xl">Veggie tomato mix</h3>
+                    <p class="text-tertiary">IDR 34.000</p>
+                    <p class="text-tertiary">Delivered to Table 4</p>
+                </div>
+                <input type="checkbox" class="checkbox-history absolute bottom-4 right-4 delete-checkbox border-secondary bg-secondary rounded h-5 w-5">
+            </div>
+            <div class="history-card flex flex-row px-4 py-5 bg-white rounded-2xl gap-5 relative">
+                <div class="">
+                    <img src="./img/products/1.webp" alt="" width="100px" class="rounded-full">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="font-extrabold text-xl">Veggie tomato mix</h3>
+                    <p class="text-tertiary">IDR 34.000</p>
+                    <p class="text-tertiary">Delivered to Table 4</p>
+                </div>
+                <input type="checkbox" class="checkbox-history absolute bottom-4 right-4 delete-checkbox border-secondary bg-secondary rounded h-5 w-5">
+            </div>
+            <div class="history-card flex flex-row px-4 py-5 bg-white rounded-2xl gap-5 relative">
+                <div class="">
+                    <img src="./img/products/1.webp" alt="" width="100px" class="rounded-full">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="font-extrabold text-xl">Veggie tomato mix</h3>
+                    <p class="text-tertiary">IDR 34.000</p>
+                    <p class="text-tertiary">Delivered to Table 4</p>
+                </div>
+                <input type="checkbox" class="checkbox-history absolute bottom-4 right-4 delete-checkbox border-secondary bg-secondary rounded h-5 w-5">
+            </div>
+            <div class="history-card flex flex-row px-4 py-5 bg-white rounded-2xl gap-5 relative">
+                <div class="">
+                    <img src="./img/products/1.webp" alt="" width="100px" class="rounded-full">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="font-extrabold text-xl">Veggie tomato mix</h3>
+                    <p class="text-tertiary">IDR 34.000</p>
+                    <p class="text-tertiary">Delivered to Table 4</p>
+                </div>
+                <input type="checkbox" class="checkbox-history absolute bottom-4 right-4 delete-checkbox border-secondary bg-secondary rounded h-5 w-5">
+            </div>
+            <div class="history-card flex flex-row px-4 py-5 bg-white rounded-2xl gap-5 relative">
+                <div class="">
+                    <img src="./img/products/1.webp" alt="" width="100px" class="rounded-full">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="font-extrabold text-xl">Veggie tomato mix</h3>
+                    <p class="text-tertiary">IDR 34.000</p>
+                    <p class="text-tertiary">Delivered to Table 4</p>
+                </div>
+                <input type="checkbox" class="checkbox-history absolute bottom-4 right-4 delete-checkbox border-secondary bg-secondary rounded h-5 w-5">
+            </div>
+            <div class="history-card flex flex-row px-4 py-5 bg-white rounded-2xl gap-5 relative">
+                <div class="">
+                    <img src="./img/products/1.webp" alt="" width="100px" class="rounded-full">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="font-extrabold text-xl">Veggie tomato mix</h3>
+                    <p class="text-tertiary">IDR 34.000</p>
+                    <p class="text-tertiary">Delivered to Table 4</p>
+                </div>
+                <input type="checkbox" class="checkbox-history absolute bottom-4 right-4 delete-checkbox border-secondary bg-secondary rounded h-5 w-5">
+            </div>
+            <div class="history-card flex flex-row px-4 py-5 bg-white rounded-2xl gap-5 relative">
+                <div class="">
+                    <img src="./img/products/1.webp" alt="" width="100px" class="rounded-full">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="font-extrabold text-xl">Veggie tomato mix</h3>
+                    <p class="text-tertiary">IDR 34.000</p>
+                    <p class="text-tertiary">Delivered to Table 4</p>
+                </div>
+                <input type="checkbox" class="checkbox-history absolute bottom-4 right-4 delete-checkbox border-secondary bg-secondary rounded h-5 w-5">
+            </div>
+            <div class="history-card flex flex-row px-4 py-5 bg-white rounded-2xl gap-5 relative">
+                <div class="">
+                    <img src="./img/products/1.webp" alt="" width="100px" class="rounded-full">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="font-extrabold text-xl">Veggie tomato mix</h3>
+                    <p class="text-tertiary">IDR 34.000</p>
+                    <p class="text-tertiary">Delivered to Table 4</p>
+                </div>
+                <input type="checkbox" class="checkbox-history absolute bottom-4 right-4 delete-checkbox border-secondary bg-secondary rounded h-5 w-5">
+            </div>
+            <div class="history-card flex flex-row px-4 py-5 bg-white rounded-2xl gap-5 relative">
+                <div class="">
+                    <img src="./img/products/1.webp" alt="" width="100px" class="rounded-full">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="font-extrabold text-xl">Veggie tomato mix</h3>
+                    <p class="text-tertiary">IDR 34.000</p>
+                    <p class="text-tertiary">Delivered to Table 4</p>
+                </div>
+                <input type="checkbox" class="checkbox-history absolute bottom-4 right-4 delete-checkbox border-secondary bg-secondary rounded h-5 w-5">
+            </div>
+            <div class="history-card flex flex-row px-4 py-5 bg-white rounded-2xl gap-5 relative">
+                <div class="">
+                    <img src="./img/products/1.webp" alt="" width="100px" class="rounded-full">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="font-extrabold text-xl">Veggie tomato mix</h3>
+                    <p class="text-tertiary">IDR 34.000</p>
+                    <p class="text-tertiary">Delivered to Table 4</p>
+                </div>
+                <input type="checkbox" class="checkbox-history absolute bottom-4 right-4 delete-checkbox border-secondary bg-secondary rounded h-5 w-5">
+            </div>
+            <div class="history-card flex flex-row px-4 py-5 bg-white rounded-2xl gap-5 relative">
+                <div class="">
+                    <img src="./img/products/1.webp" alt="" width="100px" class="rounded-full">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="font-extrabold text-xl">Veggie tomato mix</h3>
+                    <p class="text-tertiary">IDR 34.000</p>
+                    <p class="text-tertiary">Delivered to Table 4</p>
+                </div>
+                <input type="checkbox" class="checkbox-history absolute bottom-4 right-4 delete-checkbox border-secondary bg-secondary rounded h-5 w-5">
+            </div>
+            <div class="history-card flex flex-row px-4 py-5 bg-white rounded-2xl gap-5 relative">
+                <div class="">
+                    <img src="./img/products/1.webp" alt="" width="100px" class="rounded-full">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="font-extrabold text-xl">Veggie tomato mix</h3>
+                    <p class="text-tertiary">IDR 34.000</p>
+                    <p class="text-tertiary">Delivered to Table 4</p>
+                </div>
+                <input type="checkbox" class="checkbox-history absolute bottom-4 right-4 delete-checkbox border-secondary bg-secondary rounded h-5 w-5">
+            </div>
+        </section>
+    </section>
+    <footer class="bg-[#F8F8F8] px-22 text-[#4f5665]">
+        <div class="py-20"></div>
+        <div class="flex flex-col-reverse gap-12 md:flex-row">
+            <div class="flex flex-col gap-4 md:flex-[2_2_0%]">
+                <div class="font-extrabold flex flex-row gap-2">
+                    <img src="./img/icon.png" alt="icon-coffee" width="30px"> <h1 class="text-xl">Coffee Shop</h1>
+                </div>
+                <div class="md:w-96">Coffee Shop is a store that sells some good meals, and especially coffee. We provide high quality beans</div>
+                <div class="flex flex-row gap-5">
+                    <a href="#" class="bg-secondary h-[35px] w-[35px] flex items-center justify-center rounded-full"><img src="./img/facebook.svg" width="20px" alt="twitter" class=""></a>
+                    <a href="#" class="bg-secondary h-[35px] w-[35px] flex items-center justify-center rounded-full"><img src="./img/twitter.svg" width="20px" alt="twitter"></a>
+                    <a href="#" class="bg-secondary h-[35px] w-[35px] flex items-center justify-center rounded-full"><img src="./img/instagram.svg" width="20px" alt="twitter"></a>
+                </div>
+                <div class="copyright">(c) 2023 Coffee Store</div>
+            </div>
+            <nav class="flex flex-row gap-10 md:flex-1">
+                <div class="flex-1 flex flex-col gap-5">
+                    <div class="grid-item">
+                        <h4 class="font-bold">Product</h4>
+                    </div> 
+                    <div class="flex flex-col gap-2">
+                        <div class="grid-item"><a href="http://" target="_blank" rel="noopener noreferrer"> Download</a></div>
+                        <div class="grid-item">Pricing</div>
+                        <div class="grid-item">Locations</div>
+                        <div class="grid-item">Countries</div>
+                        <div class="grid-item">Blog</div>
+                    </div>
+                </div>
+                <div class="flex-1 flex flex-col gap-5">
+                    <div class="grid-item">
+                        <h4 class="font-bold">Engage</h4>
+                    </div> 
+                    <div class="flex flex-col gap-2">
+                        <div class="grid-item">Coffee Shop ?</div>
+                        <div class="grid-item">FAQ</div>
+                        <div class="grid-item">About Us</div>
+                        <div class="grid-item">Privacy Policy</div>
+                        <div class="grid-item">Terms of Services</div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="py-5"></div>
+    </footer>
+</body>
+</html>

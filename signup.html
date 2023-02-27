@@ -7,6 +7,7 @@
     <meta name="description" content="Signup page coffee shop">
     <title>Coffee Shop - Signup</title>
     <link rel="stylesheet" href="style.css">
+    <script src="./js/signup.js" defer></script>
 </head>
 <body class="login-page">
     <div class="body-login" style="flex-wrap: wrap;">
@@ -19,18 +20,22 @@
                 </div>
                 <h2>Sign Up</h2>
             </header>
-            <div class="mb20"></div>
             <section class="login-form">
-                <form>
+                <form id="signup-form">
+                    <div class="mb20">
+                        <div id="notif" class="alert-container">
+                            <div class="alert danger"><strong>Error</strong></div>
+                        </div>
+                    </div>
                     <div class="mb20">
                         <label for="email" class="">Email Address:</label>
-                        <input type="email" name="email" id="" placeholder="Enter your email address">
+                        <input type="email" name="email" id="email" placeholder="Enter your email address">
 
                         <label for="pass">Password:</label>
-                        <input type="password" name="password" id="" placeholder="Enter your password">
+                        <input type="password" name="password" id="password" placeholder="Enter your password">
 
                         <label for="phone_number">Phone Number:</label>
-                        <input type="text" name="phone_number" id="" placeholder="Enter your phone number">
+                        <input type="text" name="phone_number" id="phoneNumber" placeholder="Enter your phone number">
 
                         <button class="big-btn btn-yellow btn-signup">Sign Up</button>
                         <button class="big-btn btn-white"><img src="./img/icons8-google.svg" alt="google" width="20px" style="vertical-align:middle;">  Sign up with Google</button>

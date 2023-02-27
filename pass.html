@@ -7,6 +7,7 @@
     <meta name="description" content="Login page coffee shop">
     <title>Coffee Shop - Login</title>
     <link rel="stylesheet" href="style.css">
+    <script src="./js/pass.js" defer></script>
 </head>
 <body class="login-page font-poppins">
     <div class="body-login" style="flex-wrap: wrap;">
@@ -19,24 +20,28 @@
                 </div>
                 <h2></h2>  
             </header>
-            <div class="mb20"></div>
             <section class="login-form pass-form mb20">
-                <form>
+                <form id="pass-form">
+                    <div class="mb20">
+                        <div id="notif" class="alert-container">
+                            <div class="alert danger"><strong>Error</strong></div>
+                        </div>
+                    </div>
                     <div class="mb20 center">
                         <h2>Forgot your password?</h2>
                     </div>
                     <div class="mb20 center">
                     <p>Don’t worry, we got your back!</p>
                     </div>
-                    <div class="mb20">
+                    <div class="mb20" id="input-email">
                         <!-- <label for="email" class="">Email Address:</label> -->
-                        <input type="email" name="email" id="" placeholder="Enter your email adress to get link">
+                        <input type="email" name="email" id="email" placeholder="Enter your email adress to get link">
 
                         <button class="big-btn btn-yellow btn-signup">Send</button>
                         
                     </div>
             </form>
-            <form action="./signup.html">
+            <form action="./signup.html" id="resend-pass" class="mb20" style="display: none;">
                 <div class="center mb20">Click here if you didn’t receive any link in 2 minutes</div>
                 <div class="center mb10 active">01:52</div>
                 <button class="big-btn btn-brown btn-login">Resend Link</button>
