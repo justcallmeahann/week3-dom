@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" defer></script>
+</head>
+<body class="flex bg-neutral-800 flex-col items-center content-center">
+    <section class="flex flex-row gap-4 m-5">
+        <input class="rounded-xl w-96 p-3" type="text" name="url" id="url-json" value="https://jsonplaceholder.typicode.com/users" disabled>
+        <button class="fetch-btn py-2 px-5 bg-emerald-500 rounded-xl hover:bg-emerald-400 duration-500">Fetch</button>
+        <button class="reset-btn py-2 px-5 bg-emerald-500 rounded-xl hover:bg-emerald-400 duration-500">Reset</button>
+    </section>
+    <section class="text-white w-full flex flex-col items-center content-center mb-10">
+        <h1 class="text-2xl mb-10">Result</h1>
+        <div class="result">Data belum di-fetch</div>
+    </section>
+</body>
+</html>

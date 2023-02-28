@@ -16,16 +16,18 @@ function validationPass(event) {  // fungsi validasi login
   const email = document.querySelector("#email");
 
   if(email.value == ""){
-    return Notification("error", "Please enter your registered email");
+    return Notification("error", "Please enter your registered email"); // validasi harus input email
   } else if (!email.value.match(emailRegex)) {
-    return Notification("error", "Please enter a valid email.");
+    return Notification("error", "Please enter a valid email.");// validasi format email
   } else if(email.value !== regEmail){
-    return Notification("error", "It seems your email has not been registered.");
+    return Notification("error", "It seems your email has not been registered.");// validasi apakah sudah teregister?
   }
 
+  // tidak ada error, lanjut kode ini
   Notification("success", "Password reset link has been sent to your email. Just check it!");
   console.log(`Reset password: ${email.value}`);
 
+  // mengubah tampilan
   const passinput = document.getElementById("input-email");
   passinput.style.display = 'none';
 

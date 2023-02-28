@@ -19,13 +19,14 @@ function validationLogin(event) {  // fungsi validasi login
   const password = document.querySelector("#password");
 
   if(email.value == "" || password.value == ""){
-    return Notification("error", "Please enter your email and password");
+    return Notification("error", "Please enter your email and password"); // validasi harus input email dan password
   } else if (!email.value.match(emailRegex)) {
-    return Notification("error", "Please enter a valid email.");
-  } else if(email.value !== regEmail && password.value !== regPass){
-    return Notification("error", "Email and password doesn't match with our record. Are you forgot?");
+    return Notification("error", "Please enter a valid email."); // validasi format email
+  } else if(email.value !== regEmail || password.value !== regPass){
+    return Notification("error", "Email and password doesn't match with our record. Are you forgot?"); // validasi apakah teregistrasi
   }
 
+  // jika tidak ada error
   Notification("success", "Login successful");
   console.log(`Successful login as ${email.value}`);
 }
